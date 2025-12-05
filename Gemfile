@@ -5,8 +5,6 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in project42.gemspec
 gemspec
 
-gem "rake", "~> 13.0"
-
-gem "rspec", "~> 3.0"
-
-gem "rubocop", "~> 1.21"
+gem "rake", "13.3.1"
+gem "rspec", "3.13.2"
+gem "rubocop", "1.81.7"
