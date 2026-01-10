@@ -1,4 +1,4 @@
-FROM ruby:3.2.4
+FROM ruby:3.4.8-bullseye
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -7,7 +7,6 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
   unixodbc-dev \
   unixodbc \
   libssl-dev && \
-  apt-get upgrade -y && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 

@@ -5,6 +5,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in project42.gemspec
 # gemspec
 
+gem "aws-sdk-s3", "1.194.0"
 gem "rake", "13.3.1"
 gem "rspec", "3.13.2"
 gem "rubocop", "1.81.7"
