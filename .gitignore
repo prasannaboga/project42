@@ -11,3 +11,4 @@
 .rspec_status
 notes.txt
 .env
+.vscode/settings.json

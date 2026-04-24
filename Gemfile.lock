@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    amazing_print (2.0.0)
     ast (2.4.3)
     aws-eventstream (1.4.0)
     aws-partitions (1.1237.0)
@@ -26,6 +27,8 @@ GEM
     benchmark (0.5.0)
     bigdecimal (4.1.1)
     diff-lcs (1.6.2)
+    digest-crc (0.7.0)
+      rake (>= 12.0.0, < 14.0.0)
     dotenv (3.2.0)
     jaro_winkler (1.7.0)
     jmespath (1.6.2)
@@ -88,6 +91,8 @@ GEM
     rubocop-ast (1.49.1)
       parser (>= 3.3.7.2)
       prism (~> 1.7)
+    ruby-kafka (1.5.0)
+      digest-crc
     ruby-odbc (0.999992)
     ruby-progressbar (1.13.0)
     sequel (5.103.0)
@@ -132,11 +137,13 @@ PLATFORMS
   x86_64-darwin-25
 
 DEPENDENCIES
+  amazing_print (= 2.0)
   aws-sdk-s3 (= 1.219.0)
   dotenv (= 3.2)
   rake (= 13.3.1)
   rspec (= 3.13.2)
   rubocop (= 1.86.1)
+  ruby-kafka (= 1.5.0)
   ruby-odbc (= 0.999992)
   sequel (= 5.103.0)
   solargraph (= 0.58.3)
