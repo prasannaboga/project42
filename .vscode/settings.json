@@ -1,3 +1,4 @@
 {
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "ruby.rubocop.executePath": "${env:HOME}/.rvm/gems/ruby-3.4.8@project42/bin/"
 }
