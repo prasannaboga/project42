@@ -12,7 +12,7 @@ gem "rake", "13.3.1"
 gem "rspec", "3.13.2"
 gem "rubocop", "1.86.1"
 gem "ruby-kafka", "1.5.0"
-gem "ruby-odbc", "0.999992"
+gem "ruby-odbc", "0.999993"
 gem "sequel", "5.103.0"
 gem "simplecov", "0.22.0", require: false
 gem "solargraph", "0.58.3"

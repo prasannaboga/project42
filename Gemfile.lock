@@ -92,7 +92,7 @@ GEM
       prism (~> 1.7)
     ruby-kafka (1.5.0)
       digest-crc
-    ruby-odbc (0.999992)
+    ruby-odbc (0.999993)
     ruby-progressbar (1.13.0)
     sequel (5.103.0)
       bigdecimal
@@ -149,7 +149,7 @@ DEPENDENCIES
   rspec (= 3.13.2)
   rubocop (= 1.86.1)
   ruby-kafka (= 1.5.0)
-  ruby-odbc (= 0.999992)
+  ruby-odbc (= 0.999993)
   sequel (= 5.103.0)
   simplecov (= 0.22.0)
   solargraph (= 0.58.3)
