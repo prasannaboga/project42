@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -24,6 +27,7 @@ jobs:
           mkdir -p /home/runner/apt-cache
           sudo apt-get update
           sudo apt-get install -y -o Dir::Cache::Archives="/home/runner/apt-cache" unixodbc-dev
+          sudo chown -R $(whoami) /home/runner/apt-cache
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
