@@ -1,9 +1,12 @@
 {
-  "files.insertFinalNewline": true,
   "[ruby]": {
     "editor.defaultFormatter": "Shopify.ruby-lsp"
   },
-  "files.autoSave": "afterDelay",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.fontSize": 14,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true
 }
