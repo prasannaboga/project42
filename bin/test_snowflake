@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "dotenv/load"
+require_relative "../lib/project42"
+require "amazing_print"
+require "sequel"
+
+puts "Script is running on #{Project42::VERSION}"
+
+snowflake_config = {
+  driver: ENV.fetch("SNOWFLAKE_DRIVER", nil),
+  authenticator: "SNOWFLAKE_JWT",
+  database: ENV.fetch("SNOWFLAKE_DATABASE", nil),
+  role: ENV.fetch("SNOWFLAKE_ROLE", nil),
+  server: ENV.fetch("SNOWFLAKE_SERVER", nil),
+  uid: ENV.fetch("SNOWFLAKE_UID", nil),
+  warehouse: ENV.fetch("SNOWFLAKE_WAREHOUSE", nil),
+  max_connection_lifetime: 2700,
+  connection_validation_timeout: 60
+}
+
+snowflake_config["PRIV_KEY_FILE"] = ENV.fetch("SNOWFLAKE_PRIVATE_KEY_PATH", nil)
+snowflake_config["CLIENT_SESSION_KEEP_ALIVE"] = true
+snowflake_config["CLIENT_SESSION_KEEP_ALIVE_HEARTBEAT_FREQUENCY"] = 60 * 60
+
+puts "Snowflake configuration:"
+ap snowflake_config
+
+Sequel.default_timezone = :utc
+
+def connection(config)
+  Sequel.odbc(config).tap do |database|
+    database.extension :connection_validator
+    database.pool.connection_validation_timeout = 60 * 60
+  end
+end
+
+db = connection(snowflake_config)
+p db.test_connection
+
+stmt = db["SELECT CURRENT_VERSION() AS version"]
+p stmt.all

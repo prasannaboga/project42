@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "dotenv/load"
+require_relative "../lib/project42"
+require "amazing_print"
+require "kafka"
+
+puts "Starting Kafka consumer..."
+
+kafka = Kafka.new(["localhost:9092"])
+consumer = kafka.consumer(group_id: "test")
+consumer.subscribe("my-topic")
+
+consumer.each_message do |msg|
+  puts msg.value
+end
+
+puts "Completed Kafka consumer..."
+
+# Run Kafka server
+# docker run -p 9092:9092 apache/kafka
+# echo "user1:{\"id\":1}" | kcat -b localhost:9092 -t my-topic -P -K:

@@ -6,10 +6,9 @@ Gem::Specification.new do |spec|
   spec.name = "project42"
   spec.version = Project42::VERSION
   spec.authors = ["Prasanna Kumar"]
-  spec.email = ["prasannaboga@gmail.com"]
 
-  spec.summary = "Testing Ruby 3.4.8 Changes"
-  spec.description = "Testing Ruby 3.4.8 Changes"
+  spec.summary = "Testing Ruby 3.4.9 Changes"
+  spec.description = "Testing Ruby 3.4.9 Changes"
   spec.homepage = "https://github.com/prasannaboga/project42"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.4"
@@ -18,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"] = spec.homepage
+  spec.metadata["rubygems_mfa_required"] = "true"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

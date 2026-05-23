@@ -1,4 +1,9 @@
 {
-    "files.insertFinalNewline": true,
-    "ruby.rubocop.executePath": "${env:HOME}/.rvm/gems/ruby-3.4.8@project42/bin/"
+  "files.insertFinalNewline": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+  },
+  "files.autoSave": "afterDelay",
+  "editor.fontSize": 14,
+  "editor.tabSize": 2
 }

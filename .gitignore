@@ -1,3 +1,4 @@
+# Ruby defaults
 /.bundle/
 /.yardoc
 /_yardoc/
@@ -9,6 +10,10 @@
 
 # rspec failure tracking
 .rspec_status
-notes.txt
+
+# Env
 .env
-.vscode/settings.json
+*.p8
+
+# Otehrs
+notes.txt
